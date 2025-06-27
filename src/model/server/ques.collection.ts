@@ -27,26 +27,26 @@ export default async function createQuesCollection() {
     console.log("Question Attributes created !!");
 
     //Indexes
-    await Promise.all([
-        databases.createIndex(
-            db , questionCollection, "title", IndexType.Fulltext,
-            ["title"] , ['asc']
-        ),
-          databases.createIndex(
-            db , questionCollection, "title", IndexType.Fulltext,
-            ["content"] , ['asc']
-        ),
-          databases.createIndex(
-            db , questionCollection, "title", IndexType.Key,
-            ["authorID"] , ['asc']
-        ),
-          databases.createIndex(
-            db , questionCollection, "title", IndexType.Fulltext,
-            ["tags"] , ['asc']
-        ),
-          databases.createIndex(
-            db , questionCollection, "title", IndexType.Key,
-            ["attachmentId"] , ['asc']
-        )
-    ])
+    // await Promise.all([
+    //     databases.createIndex(
+    //         db , questionCollection, "title", IndexType.Fulltext,
+    //         ["title"] , ['asc']
+    //     ),
+    //       databases.createIndex(
+    //         db , questionCollection, "title", IndexType.Fulltext,
+    //         ["content"] , ['asc']
+    //     ),
+    //       databases.createIndex(
+    //         db , questionCollection, "title", IndexType.Key,
+    //         ["authorID"] , ['asc']
+    //     ),
+    //       databases.createIndex(
+    //         db , questionCollection, "title", IndexType.Fulltext,
+    //         ["tags"] , ['asc']
+    //     ),
+    //       databases.createIndex(
+    //         db , questionCollection, "title", IndexType.Key,
+    //         ["attachmentId"] , ['asc']
+    //     )
+    // ])
 }
